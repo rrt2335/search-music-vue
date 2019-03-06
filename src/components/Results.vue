@@ -1,12 +1,12 @@
 <template>
 
     <div class="results row d-flex justify-content-around">
-        <div class="col-4 yellow">
+        <div class="col-5 yellow">
             <ol>
                 <li v-for="song in results" @click='setActiveSong(song)'>{{song.trackName}}</li>
             </ol>
-
         </div>
+        <details-view :song="activeSong"></details-view>
     </div>
 
 </template>
@@ -36,7 +36,11 @@
         }
     }
 
-
-
-
 </script>
+
+<style>
+    ol {
+        font-size: 24px;
+        text-align: left;
+    }
+</style>
